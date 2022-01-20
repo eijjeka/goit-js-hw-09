@@ -32,3 +32,31 @@ img {
   outline: none;
   border: none;
 }
+
+input[type='text'] {
+  padding: 10px 20px;
+}
+button[data-start] {
+  padding: 10px 20px;
+}
+
+.timer {
+  display: flex;
+  margin-right: -20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.value {
+  font-size: 65px;
+}
+
+.label {
+  font-size: 20px;
+  text-transform: uppercase;
+}
