@@ -33,7 +33,7 @@ img {
   border: none;
 }
 
-input[type='text'] {
+.input_task_two {
   padding: 10px 20px;
 }
 .btn_task_two {
