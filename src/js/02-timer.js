@@ -46,7 +46,7 @@ const onStartDate = () => {
         refs.dataHours.textContent = hours;
         refs.dataMinutes.textContent = minutes;
         refs.dataSeconds.textContent = seconds;
-        if (days && hours && minutes && seconds < 0) {
+        if (days && hours && minutes && seconds <= 0) {
             clearInterval(intervalId)
         }
     }, 1000)
