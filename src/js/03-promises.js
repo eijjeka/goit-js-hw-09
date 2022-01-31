@@ -45,8 +45,6 @@ function onClickSubmit(event) {
   }
 }
 
-
-
 console.log('script start');
 
 setTimeout(function () {
@@ -61,4 +59,7 @@ Promise.resolve()
     console.log('promise2');
   });
 
-console.log('script end');я
+console.log('script end');
+
+
+refs.submit.addEventListener('click', onClickSubmit);
