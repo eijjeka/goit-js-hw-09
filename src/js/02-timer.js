@@ -41,13 +41,10 @@ const onStartDate = () => {
     const intervalId = setInterval(() => {
         const currentTime = Date.now();
         const deltaTime = selectDate - currentTime;
-        const {days, hours, minutes, seconds} = convertMs(deltaTime);
-        refs.dataDays.textContent = days;
-        refs.dataHours.textContent = hours;
-        refs.dataMinutes.textContent = minutes;
-        refs.dataSeconds.textContent = seconds;
-        if (days && hours && minutes && seconds <= 0) {
-            clearInterval(intervalId)
+        const { days, hours, minutes, seconds } = convertMs(deltaTime);
+        addTextForRefs(days, hours, minutes, seconds);
+        if (days < 1 && hours < 1 && minutes < 1 && seconds < 1) {
+                clearInterval(intervalId)
         }
     }, 1000)
 } 
@@ -73,6 +70,13 @@ function convertMs(ms) {
 
 function addLeadingZero(value) {
     return String(value).padStart(2, '0');
+}
+
+function addTextForRefs(days, hours, minutes, seconds) {
+    refs.dataDays.textContent = days;
+        refs.dataHours.textContent = hours;
+        refs.dataMinutes.textContent = minutes;
+        refs.dataSeconds.textContent = seconds;
 }
 
 refs.btnStart.addEventListener('click', onStartDate);
